@@ -1,0 +1,68 @@
+/* Sign-up CSS */
+
+body{
+  margin-top: 300px;
+  background-image: url("../K3C-Copy/Images/Sign-up.png");
+  background-repeat: no-repeat;
+  width: 1440px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  margin-top: 400px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  width: 600px;
+  padding: 15px;
+  position: absolute;
+  margin-left: 650px;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-floating{
+  color: #E7F6F2;
+  margin-left: -40px;
+}
+
+.form-signin input[type="email"] {
+  background-color: #2C3333;
+  width: 250px;
+  background-color: transparent;
+  color: #eeeeee;
+  outline: none;
+  outline-style: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid #eeeeee 1px;
+  padding: 3px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-signin input[type="password"] {
+  background-color: #2C3333;
+  width: 250px;
+  background-color: transparent;
+  color: #eeeeee;
+  outline: none;
+  outline-style: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid #eeeeee 1px;
+  padding: 3px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.checkbox{
+  color: #E7F6F2;
+  margin-left: -40px;
+}
