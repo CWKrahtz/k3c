@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"></script>
+    <script src="js.js"></script>
 </head>
 <body class="background">
     <nav class="navbar navbar-expand-lg bg-light">
@@ -38,9 +39,9 @@
       </nav>
 
       <div class="card card1">
-    <div class="card-body">
+    <div onclick="loadData()" class="card-body">
       <h5 class="card-title">Insert movie</h5>
-      <p class="card-text"><h1>Movie Name</h1>  </p>
+      <p class="card-text"><h1 id="movieName">Movie Name</h1>  </p>
       <p><h3> Discription</h3></p>
     </div>
     </div>

@@ -1,0 +1,39 @@
+body {
+    background: linear-gradient(to bottom, #395b64 0%, #2c3333 100%);
+}
+
+.navbar {
+    padding-top: 0px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #A5C9CA;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #A5C9CA;
+    color: #2c3333;
+}
+
+.navbar-brand {
+    
+    background: linear-gradient(to bottom, #395b64 20%, #e7f6f28a 100%);
+    border-radius: 5px;
+}
+
+.carousel {
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.card {
+    padding: 0px;
+}
+
+.card img {
+    width: 100%;
+}
+
+iframe {
+    width: 100%;
+}

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies - K3C</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="main.css">
+
+    <script src="java.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container" style="margin-bottom: 50px;">
+        <nav class="navbar navbar-expand-lg" style="margin-bottom: 50px;">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="movies.html"><img src="Logo/K3C.png" style="width: 35px;"></a>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#Popular_Movies">Popular Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#My_List">My List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#Comedy">Comedy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#ContinueWatching">Continue Watching</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-secondary" type="submit">Sign up</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!--Heading-->
+        <div class="row" style="margin-bottom: 50px; color: #A5C9CA;">
+            <div class="col-sm-12" style="text-align: center;">
+                <h1>SERIES THAT ARE BEING WORTHY</h1>
+                <h1>THE BEST OF THE BEST FOR THE BEST</h1>
+            </div>
+        </div>
+
+        <!--Hero Carousel-->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+
+                <div class="item active">
+                    <img src="images/img1.png" style="width:100%;">
+                    <div class="carousel-caption">
+                        <!--<h3>Los Angeles</h3>
+                        <p>LA is always so much fun!</p>-->
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="images/img2.png" style="width:100%;">
+                    <div class="carousel-caption">
+                        <!--<h3>Chicago</h3>
+                        <p>Thank you, Chicago!</p>-->
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="images/img3.png" style="width:100%;">
+                    <div class="carousel-caption">
+                        <!--<h3>New York</h3>
+                        <p>We love the Big Apple!</p>-->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Left and right controls -->
+            <!--
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            -->
+        </div>
+
+        <!--Movie trailers-->
+        <div class="row">
+            <div class="col-sm-7" style="height: 250px; padding: 0px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/nMqETeQrgqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-sm-5" style="height: 250px; padding: 0px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/zSWdZVtXT7E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-5" style="height: 250px; padding: 0px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/XVQsff9loTA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-sm-7" style="height: 250px; padding: 0px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xxSlvwYwvtw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 50px;">
+            <div class="col-sm-7" style="height: 250px; padding: 0px;">
+                <iframe width="560" height="250" src="https://www.youtube.com/embed/giXco2jaZ_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-sm-5" style="height: 250px; padding: 0px;">
+                <iframe width="560" height="250" src="https://www.youtube.com/embed/a8Gx8wiNbs8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+        <!--Popular Movies-->
+        <div class="row" id="Popular_Movies" style="margin-bottom: 50px;">
+            <div class="col-sm-12" style="color: white;">
+                <h3>Popular Movies</h3>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 50px;">
+            <!-- Card001 -->
+            <div class="card col-sm-3" style="border: none; background-color: #2C3333; margin-left: 7%;">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moveiePoster1" src="images/1.jfif" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body card-body_hover" style="color: #A5C9CA;">
+                    <h5 class="card-title">Movie Name</h5>
+                    <p class="card-text">Genre</p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA;">Watch</a>
+                </div>
+            </div>
+
+            <!-- Card002 -->
+            <div class="card col-sm-3" style="border: none; background-color: #2C3333; margin-left: 7%;">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moveiePoster2" src="images/2.jfif" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 class="card-title">Movie Name</h5>
+                    <p class="card-text">Genre</p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA;">Watch</a>
+                </div>
+            </div>
+
+            <!-- Card003 -->
+            <div class="card col-sm-3" style="border: none; background-color: #2C3333; margin-left: 7%;">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moveiePoster3" src="images/3.jfif" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 class="card-title">Movie Name</h5>
+                    <p class="card-text">Genre</p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA;">Watch</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Your List-->
+        <div class="row" id="My_List" style="margin-bottom: 50px;">
+            <div class="col-sm-12" style="color: white;">
+                <h3>Your List</h3>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 50px;">
+            <!-- Card004 -->
+            <div class="card col-sm-2" style="padding: 0px; border: none; margin-left: 2%; background-color: #2C3333;">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moveiePoster4" src="images/4.jfif" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 class="card-title">Movie Name</h5>
+                    <p class="card-text">Genre</p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA;">Watch</a>
+                </div>
+            </div>
+
+            <!-- Card005 -->
+            <div class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: #2C3333;">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moveiePoster5" src="images/5.jfif" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 class="card-title">Movie Name</h5>
+                    <p class="card-text">Genre</p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA;">Watch</a>
+                </div>
+            </div>
+
+            <!-- Card006 -->
+            <div class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: #2C3333;">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moveiePoster6" src="images/6.jfif" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 class="card-title">Movie Name</h5>
+                    <p class="card-text">Genre</p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA;">Watch</a>
+                </div>
+            </div>
+
+            <!-- Card007 -->
+            <div class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: #2C3333;">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moveiePoster7" src="images/7.jfif" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 class="card-title">Movie Name</h5>
+                    <p class="card-text">Genre</p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA;">Watch</a>
+                </div>
+            </div>
+
+            <!-- Card008 -->
+            <div class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: #2C3333;">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moveiePoster8" src="images/8.jfif" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 class="card-title">Movie Name</h5>
+                    <p class="card-text">Genre</p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA;">Watch</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Recommend For You-->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+
+                <div class="item active">
+                    <img src="images/img4.png" alt="Los Angeles" style="width:100%;">
+                    <div class="carousel-caption">
+                        <!--<h3>Los Angeles</h3>
+                        <p>LA is always so much fun!</p>-->
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="images/img5.png" alt="Chicago" style="width:100%;">
+                    <div class="carousel-caption">
+                        <!--<h3>Chicago</h3>
+                        <p>Thank you, Chicago!</p>-->
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="images/img6.png" alt="New York" style="width:100%;">
+                    <div class="carousel-caption">
+                        <!--<h3>New York</h3>
+                        <p>We love the Big Apple!</p>-->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Left and right controls -->
+            <!--
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            -->
+        </div>
+
+        <!--Comedy Movies-->
+        <div class="row" id="Comedy" style="margin-bottom: 50px;">
+            <div class="col-sm-12" style="color: white;">
+                <h3>Comedy Movies</h3>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 50px;">
+            <!-- Card009 -->
+            <div class="card col-sm-3" style="border: none; background-color: #2C3333; margin-left: 7%;">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moveiePoster9" src="images/9.jfif" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 class="card-title">Movie Name</h5>
+                    <p class="card-text">Genre</p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA;">Watch</a>
+                </div>
+            </div>
+            <!-- Card010 -->
+            <div class="card col-sm-3" style="border: none; background-color: #2C3333; margin-left: 7%;">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moveiePoste10" src="images/10.jfif" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 class="card-title">Movie Name</h5>
+                    <p class="card-text">Genre</p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA;">Watch</a>
+                </div>
+            </div>
+            <!-- Card011 -->
+            <div class="card col-sm-3" style="border: none; background-color: #2C3333; margin-left: 7%;">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moveiePoster11" src="images/11.jfif" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 class="card-title">Movie Name</h5>
+                    <p class="card-text">Genre</p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA;">Watch</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Continue To Watch-->
+        <div class="row" id="ContinueWatching" style="margin-bottom: 50px;">
+            <div class="col-sm-12" style="color: white;">
+                <h3>Continue Watching</h3>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 50px;">
+
+            <!-- Card012 -->
+            <div class="card col-sm-3" style="border: none; background-color: #2C3333; margin-left: 7%;">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moveiePoster12" src="images/12.jfif" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 class="card-title">Movie Name</h5>
+                    <p class="card-text">Genre</p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA;">Watch</a>
+                </div>
+            </div>
+            <!-- Card013 -->
+            <div class="card col-sm-3" style="border: none; background-color: #2C3333; margin-left: 7%;">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moveiePoster13" src="images/13.jfif" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 class="card-title">Movie Name</h5>
+                    <p class="card-text">Genre</p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA;">Watch</a>
+                </div>
+            </div>
+            <!-- Card014 -->
+            <div class="card col-sm-3" style="border: none; background-color: #2C3333; margin-left: 7%;">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moveiePoster14" src="images/14.jfif" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 class="card-title">Movie Name</h5>
+                    <p class="card-text">Genre</p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA;">Watch</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
