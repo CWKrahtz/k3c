@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Three</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <script src="index.js"></script>
+  
+</head>
+
+<body>
+  
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-sm bg-light">
+  <div class="container-fluid"  style="height: 80px; background-color: #2c3333ff">
+    <a class="navbar-brand" href="#"><img src="../Project/Images/Group.png" height="50px" style="margin-top: -15px; margin-left: 30px;"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-start" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="../Project/index.html" style="margin-left: 30px; font-size: medium; color: #E7F6F2; text-shadow: 2px 2px 12px #2C3333;">Home</a>
+        <a class="nav-link" href="../Project_Library/pages/library.html" style="margin-left: 30px; font-size: medium; color: #E7F6F2; text-shadow: 2px 2px 12px #2C3333;">Library</a>
+        <a class="nav-link" href="../SingleMovie/singlemovie.html" style="margin-left: 30px; font-size: medium; color: #E7F6F2; text-shadow: 2px 2px 12px #2C3333;">Movie</a>
+        <a class="nav-link" href="../Navbar&Footer/index.html" style="margin-left: 30px; font-size: medium; color: #E7F6F2; text-shadow: 2px 2px 12px #2C3333;">My List</a>
+      </div>
+    </div>
+    <div class=" nav-item">
+      <i class="bi bi-search" style="height: 50px;"></i>
+      <i class="bi bi-person-circle" style="height: 50px;"></i>
+    </div>
+  </div>
+</nav>
+<!-- Navbar -->
+  <!-- Message -->
+  <div class="row" style="margin-top: 4%;">
+    <div class="col-sm-12">
+      <h2 class="text-center " style="margin-bottom: 5%; color: #E7F6F2;">CONTINUE ON YOUR BINGE!</h2>
+    </div>
+  </div>
+  <!-- Message -->
+
+  <!-- Movies in watchlist
+  <div class="container">
+    <div id="movie1" class="row">
+
+      <img id="poster" class="col-sm-4" src="Movie poster.jpg">
+      <div class="mlc col-sm-8">
+        <div class="col-sm-12">
+          <div id="title" class="col-sm-11" style="display: inline-block; font-size: larger;"><strong>NAME</strong> </div>
+          <div id="xbtn" class="bi bi-x-lg col-sm-1" style="display: inline;"></div>
+          <button id="xbtn" type="button" class="btn-close col-sm-1" aria-label="Close"></button>
+        </div>
+        <div id="info" class="col-sm-12">
+          <p>SYNOPSIS</p>
+        </div>
+        <div class="col-sm-12">
+          <p>Genre: Horror</p>
+        </div>
+        <div class="col-sm-12">
+          <strong>RATING</strong>
+        </div>
+        <div class="col-sm-12">
+          <p>PG 13</p>
+        </div>
+        <div class="col-sm-12 d-flex justify-content-end"><button type="button"
+            class="btn btn-light shadow-sm"><strong>PLAY</strong> <i class="bi bi-play-circle"></i></button></div>
+      </div>
+    </div>
+  </div>
+  Movies in watchlist -->
+
+  <!--Movies in watchlist-->
+  <div class="row" style="margin-bottom: 50px;">
+    <!-- Card001 -->
+    <div id="movie1" class="card col-sm-2" style="padding: 0px; border: none; margin-left: 2%; background-color: transparent; border: 2px solid #E7F6F2">
+        <div class="bg-image" data-mdb-ripple-color="light">
+            <img id="libPoster1" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+        </div>
+        <div class="card-body card-body_hover" style="color: #A5C9CA;">
+            <h5 id="libTitle1" class="card-title"></h5>
+            <p id="libInfo1" class="card-text"></p>
+            <a href="#!" class="btn" style="background-color:#A5C9CA;">Info</a>
+            <input id="stw1" onclick="watchlist()" type="button" value="AddToWatch">
+            <button id="xbtn1" type="button" class="btn-close" aria-label="Close" style="background-color:#A5C9CA;"></button>
+        </div>
+    </div>
+    <!-- Card002 -->
+    <div id="movie2" class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: transparent; border: 2px solid #E7F6F2">
+        <div class="bg-image" data-mdb-ripple-color="light">
+            <img id="libPoster2" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+        </div>
+        <div class="card-body card-body_hover" style="color: #A5C9CA;">
+            <h5 id="libTitle2" class="card-title"></h5>
+            <p id="libInfo2" class="card-text"></p>
+            <a href="#!" class="btn" style="background-color:#A5C9CA;">Info</a>
+            <input id="stw2" onclick="watchlist()" type="button" value="AddToWatch">
+            <button id="xbtn2" type="button" class="btn-close" aria-label="Close" style="background-color:#A5C9CA;"></button>
+        </div>
+    </div>
+    <!-- Card003 -->
+    <div id="movie3" class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%;background-color: transparent; border: 2px solid #E7F6F2;">
+        <div class="bg-image" data-mdb-ripple-color="light">
+            <img id="libPoster3" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+        </div>
+        <div class="card-body card-body_hover" style="color: #A5C9CA;">
+            <h5 id="libTitle3" class="card-title"></h5>
+            <p id="libInfo3" class="card-text"></p>
+            <a href="#!" class="btn" style="background-color:#A5C9CA;">Info</a>
+            <input id="stw3" onclick="watchlist()" type="button" value="AddToWatch">
+            <button id="xbtn3" type="button" class="btn-close" aria-label="Close" style="background-color:#A5C9CA;"></button>
+        </div>
+    </div>
+    <!-- Card004 -->
+    <div id="movie4" class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: transparent; border: 2px solid #E7F6F2">
+        <div class="bg-image" data-mdb-ripple-color="light">
+            <img id="libPoster4" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+        </div>
+        <div class="card-body card-body_hover" style="color: #A5C9CA;">
+            <h5 id="libTitle4" class="card-title"></h5>
+            <p id="libInfo4" class="card-text"></p>
+            <a href="#!" class="btn" style="background-color:#A5C9CA;">Info</a>
+            <input id="stw4" onclick="watchlist()" type="button" value="AddToWatch">
+            <button id="xbtn4" type="button" class="btn-close" aria-label="Close" style="background-color:#A5C9CA;"></button>
+        </div>
+    </div>
+    <!-- Card005 -->
+    <div id="movie5" class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: transparent; border: 2px solid #E7F6F2">
+        <div class="bg-image" data-mdb-ripple-color="light">
+            <img id="libPoster5" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+        </div>
+        <div class="card-body card-body_hover" style="color: #A5C9CA;">
+            <h5 id="libTitle5" class="card-title"></h5>
+            <p id="libInfo5" class="card-text"></p>
+            <a href="#!" class="btn" style="background-color:#A5C9CA;">Info</a>
+            <input id="stw5" onclick="watchlist()" type="button" value="AddToWatch">
+            <button id="xbtn5" type="button" class="btn-close" aria-label="Close" style="background-color:#A5C9CA;"></button>
+        </div>
+    </div>
+  </div>
+
+  <!--Movies in watchlist-->
+  <div class="row" style="margin-bottom: 50px;">
+    <!-- Card001 -->
+    <div id="movie6" class="card col-sm-2" style="padding: 0px; border: none; margin-left: 2%; background-color: transparent; border: 2px solid #E7F6F2">
+        <div class="bg-image" data-mdb-ripple-color="light">
+            <img id="poster" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+        </div>
+        <div class="card-body card-body_hover" style="color: #A5C9CA;">
+            <h5 id="title" class="card-title"></h5>
+            <p id="info" class="card-text"></p>
+            <a href="#!" class="btn" style="background-color:#A5C9CA;">Info</a>
+            <input id="stw5" onclick="watchlist()" type="button" value="AddToWatch">
+            <button id="xbtn6" type="button" class="btn-close" aria-label="Close" style="background-color:#A5C9CA;"></button>
+        </div>
+    </div>
+    <!-- Card002 -->
+    <div id="movie7" class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: transparent; border: 2px solid #E7F6F2">
+        <div class="bg-image" data-mdb-ripple-color="light">
+            <img id="poster2" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+        </div>
+        <div class="card-body card-body_hover" style="color: #A5C9CA;">
+            <h5 id="title2" class="card-title"></h5>
+            <p id="info2" class="card-text"></p>
+            <a href="#!" class="btn" style="background-color:#A5C9CA;">Info</a>
+            <input id="stw5" onclick="watchlist()" type="button" value="AddToWatch">
+            <button id="xbtn7" type="button" class="btn-close" aria-label="Close" style="background-color:#A5C9CA;"></button>
+        </div>
+    </div>
+    <!-- Card003 -->
+    <div id="movie8" class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: transparent; border: 2px solid #E7F6F2">
+        <div class="bg-image" data-mdb-ripple-color="light">
+            <img id="poster3" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+        </div>
+        <div class="card-body card-body_hover" style="color: #A5C9CA;">
+            <h5 id="title3" class="card-title"></h5>
+            <p id="info3" class="card-text"></p>
+            <a href="#!" class="btn" style="background-color:#A5C9CA;">Info</a>
+            <input id="stw5" onclick="watchlist()" type="button" value="AddToWatch">
+            <button id="xbtn8" type="button" class="btn-close" aria-label="Close" style="background-color:#A5C9CA;"></button>
+        </div>
+    </div>
+    <!-- Card004 -->
+    <div id="movie9" class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: transparent; border: 2px solid #E7F6F2">
+        <div class="bg-image" data-mdb-ripple-color="light">
+            <img id="poster4" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+        </div>
+        <div class="card-body card-body_hover" style="color: #A5C9CA;">
+            <h5 id="title4" class="card-title"></h5>
+            <p id="info4" class="card-text"></p>
+            <a href="#!" class="btn" style="background-color:#A5C9CA;">Info</a>
+            <input id="stw5" onclick="watchlist()" type="button" value="AddToWatch">
+            <button id="xbtn9" type="button" class="btn-close" aria-label="Close" style="background-color:#A5C9CA;"></button>
+        </div>
+    </div>
+    <!-- Card005 -->
+    <div id="movie10" class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: transparent; border: 2px solid #E7F6F2">
+        <div class="bg-image" data-mdb-ripple-color="light">
+            <img id="poster5" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+        </div>
+        <div class="card-body card-body_hover" style="color: #A5C9CA;">
+            <h5 id="title5" class="card-title"></h5>
+            <p id="info5" class="card-text"></p>
+            <a href="#!" class="btn" style="background-color:#A5C9CA;">Info</a>
+            <input id="stw5" onclick="watchlist()" type="button" value="AddToWatch">
+            <button id="xbtn10" type="button" class="btn-close" aria-label="Close" style="background-color:#A5C9CA;"></button>
+        </div>
+    </div>
+  </div>
+  <!--Movies in watchlist-->
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start text-white" style="background-color: #2c3333ff; color: #A5C9CA; margin-top: 100px; ">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+        <!-- Section: Links -->
+        <section class="">
+            <!--Grid row-->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">
+                        <img src="../Navbar&Footer/Group.png" style="height:50px;">
+                    </h6>
+                    <p style="color: #A5C9CA;">
+                        KC3 is a movie streaming platform that allows you to catch up and watch all your favorite
+                        movies
+                        as well
+                        as latest releases.
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <hr class="w-100 clearfix d-md-none" />
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3" style="color: #A5C9CA;">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Pages</h6>
+                    <p>
+                        <a class="text-white">Sign-in/Up</a>
+                    </p>
+                    <p>
+                        <a class="text-white">Home</a>
+                    </p>
+                    <p>
+                        <a class="text-white">TV Shows</a>
+                    </p>
+                    <p>
+                        <a class="text-white">Movies</a>
+                    </p>
+                    <p>
+                        <a class="text-white">My list</a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="w-100 clearfix d-md-none" />
+
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none" />
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3" style="color: #A5C9CA;">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                    <p style="color: #A5C9CA;"><i class="fas fa-home mr-3"></i> Gauteng, Centurion, SA</p>
+                    <p style="color: #A5C9CA;"><i class="fas fa-envelope mr-3"></i> info@kc3.com</p>
+                    <p style="color: #A5C9CA;"><i class="fas fa-phone mr-3"></i> 012 345 6789</p>
+                    <p style="color: #A5C9CA;"><i class="fas fa-print mr-3"></i> 010 111 2131</p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold" style="color: #A5C9CA;">Follow us</h6>
+
+                    <!-- Facebook -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998"
+                        href="https://www.facebook.com/" role="button"><i class="bi bi-facebook"></i></a>
+
+                    <!-- Twitter -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee"
+                        href="https://twitter.com/" role="button"><i class="bi bi-twitter"></i></a>
+
+                    <!-- Google -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39"
+                        href="https://www.youtube.com/" role="button"><i class="bi bi-youtube"></i></a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac"
+                        href="https://www.instagram.com/" role="button"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+            <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); color: #A5C9CA;">
+        © 2022 Copyright:
+        <a class="text-white" style="color: #2C3333;">KC3.com</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+</body>
+
+</html>

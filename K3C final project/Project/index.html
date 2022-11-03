@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies - K3C</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/java.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+
+
+</head>
+
+<div id="loading-section">
+    <div id="loadText" class="loading-text">K3C Streaming</div>
+    <div class="circle-loader"></div>
+    </div>
+
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-sm bg-light">
+    <div class="container-fluid"  style="height: 80px; background-color: #2c3333ff">
+      <a class="navbar-brand" href="#"><img src="../Project/Images/Group.png" height="50px" style="margin-top: -15px; margin-left: 30px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-start" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="../Project/index.html" style="margin-left: 30px; font-size: medium; color: #E7F6F2; text-shadow: 2px 2px 12px #2C3333;">Home</a>
+          <a class="nav-link" href="../Project_Library/pages/library.html" style="margin-left: 30px; font-size: medium; color: #E7F6F2; text-shadow: 2px 2px 12px #2C3333;">Library</a>
+          <a class="nav-link" href="../SingleMovie/singlemovie.html" style="margin-left: 30px; font-size: medium; color: #E7F6F2; text-shadow: 2px 2px 12px #2C3333;">Movie</a>
+          <a class="nav-link" href="../Navbar&Footer/index.html" style="margin-left: 30px; font-size: medium; color: #E7F6F2; text-shadow: 2px 2px 12px #2C3333;">My List</a>
+        </div>
+      </div>
+      <div class=" nav-item">
+        <i class="bi bi-search" style="height: 50px;"></i>
+        <i class="bi bi-person-circle" style="height: 50px;"></i>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+    <div class="container" >
+        <!--Heading-->
+        <div class="row" style=" color: #E7F6F2; ; margin-left: -200px; margin-top: -50px;  text-align: center; width: 1530px; height: 600px; background-repeat: no-repeat;">
+            <div class="col-sm-12" style="text-align: center; margin-top: 150px; font-family: 'Raleway', sans-serif;" >
+                <h1>MOVIES THAT ARE BEING WORTHY</h1>
+                <h1>THE BEST OF THE BEST FOR THE BEST</h1>
+            </div>
+            <div class="row"
+            style="margin-bottom: 50px; font-size: 22px; margin-left: 0px; margin-right: 0px; border-radius: 5px;">
+            <div class="col-sm-10">
+                <select id="movieFilter" name="movieFilter" style="width: 30%; padding-left: 20px; font-size: medium; padding: 5px; color: #2C3333;">
+                    <option value="0">All Movies</option>
+                    <option value="1">Genre (Action)</option>
+                    <option value="2">Year (2022)</option>
+                    <option value="3">IMDB Score (2022 movies)</option>
+                </select>
+            </div>
+            <div class="col-sm-2">
+                <!--<a href="#!" class="btn" style="background-color:#A5C9CA; width: 100%;">Filter</a>-->
+                <input id="button" type="submit" value="Search" onclick="displayFilter()" style=" width: 150px; font-size: medium; padding: 5px; margin-left: -900px; color: #2C3333;" />
+            </div>
+        </div>
+        </div>
+
+        <!--Hero Carousel-->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top: -40px; ">
+            <!-- Indicators -->
+            <ol class="carousel-indicators" style="bottom: 5px; ">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+
+                <div class="item active">
+                    <img id="carImg1" src="#" style="width:100%; border-radius: 20px;">
+                    <div class="carousel-caption"
+                        style="background-color: #00000070; width: 100%; left: 0px; bottom: 0px; border-radius: 20px;">
+                        <h3 id="carTitle1"></h3>
+                        <p id="carRate1"></p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img id="carImg2" src="#" style="width:100%; border-radius: 20px;">
+                    <div class="carousel-caption"
+                        style="background-color: #00000070; width: 100%; left: 0px; bottom: 0px; border-radius: 20px;">
+                        <h3 id="carTitle2"></h3>
+                        <p id="carRate2"></p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img id="carImg3" src="#" style="width:100%; border-radius: 20px; box-shadow: 2px, 5px, 8px #E7F6F2;">
+                    <div class="carousel-caption"
+                        style="background-color: #00000070; width: 100%; left: 0px; bottom: 0px; border-radius: 20px;">
+                        <h3 id="carTitle3"></h3>
+                        <p id="carRate3"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Movie trailers-->
+        <!--<div class="row">
+            <div class="col-sm-7" style="height: 250px; padding: 0px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/nMqETeQrgqU"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="col-sm-5" style="height: 250px; padding: 0px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/zSWdZVtXT7E"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-5" style="height: 250px; padding: 0px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/XVQsff9loTA"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="col-sm-7" style="height: 250px; padding: 0px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xxSlvwYwvtw"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 50px;">
+            <div class="col-sm-7" style="height: 250px; padding: 0px;">
+                <iframe width="560" height="250" src="https://www.youtube.com/embed/giXco2jaZ_4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="col-sm-5" style="height: 250px; padding: 0px;">
+                <iframe width="560" height="250" src="https://www.youtube.com/embed/a8Gx8wiNbs8"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>-->
+
+
+        <!--Popular Movies-->
+        <div style="height: 550px;  ">
+            <div class="row" id="Popular_Movies" style="margin-bottom: 50px;">
+            <div class="col-sm-12" style=" color: white; font-family: 'Raleway', sans-serif;">
+                <h3>Popular Movies</h3>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 50px;">
+            <!-- Card001 -->
+            <div class="card col-sm-2" style="padding: 0px; border: none; margin-left: 2%; background-color: transparent; border: 2px solid #E7F6F2">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moviePoster1" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body card-body_hover" style="color: #A5C9CA;">
+                    <h5 id="movieTitle1" class="card-title"></h5>
+                    <p id="movieRelease1" class="card-text" style="color: #A5C9CA;"></p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA; font-family: 'Raleway', sans-serif; width: 170px;">Watch</a>
+                </div>
+            </div>
+
+            <!-- Card002 -->
+            <div class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: transparent; border: 2px solid #E7F6F2">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moviePoster2" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 id="movieTitle2" class="card-title"></h5>
+                    <p id="movieRelease2" class="card-text" style="color: #A5C9CA;"></p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA; font-family: 'Raleway', sans-serif; width: 170px;">Watch</a>
+                </div>
+            </div>
+
+            <!-- Card003 -->
+            <div class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: transparent; border: 2px solid #E7F6F2;">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moviePoster3" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 id="movieTitle3" class="card-title"></h5>
+                    <p id="movieRelease3" class="card-text" style="color: #A5C9CA;"></p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA; font-family: 'Raleway', sans-serif; width: 170px;">Watch</a>
+                </div>
+            </div>
+            <!-- Card004 -->
+            <div class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: transparent; border: 2px solid #E7F6F2">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moviePoster4" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 id="movieTitle4" class="card-title"></h5>
+                    <p id="movieRelease4" class="card-text" style="color: #A5C9CA;"></p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA; font-family: 'Raleway', sans-serif; width: 170px;">Watch</a>
+                </div>
+            </div>
+            <!-- Card005 -->
+            <div class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: transparent; border: 2px solid #E7F6F2">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moviePoster5" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 id="movieTitle5" class="card-title"></h5>
+                    <p id="movieRelease5" class="card-text" style="color: #A5C9CA;"></p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA; font-family: 'Raleway', sans-serif; width: 170px;">Watch</a>
+                </div>
+            </div>
+        </div> 
+        </div>
+       
+
+        <!--Your List-->
+        <div class="row" id="My_List" style="margin-bottom: 50px;">
+            <div class="col-sm-12" style="color: white; font-family: 'Raleway', sans-serif; padding: 10px">
+                <h3>Your List</h3>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 50px;">
+            <!-- Card006 -->
+            <div class="card col-sm-2" style="padding: 0px; border: none; margin-left: 2%; background-color: transparent; border: 2px solid #E7F6F2">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moviePoster6" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 id="movieTitle6" class="card-title"></h5>
+                    <p id="movieRelease6" class="card-text" style="color: #A5C9CA;"></p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA; font-family: 'Raleway', sans-serif; padding: 10px; width: 170px;">Watch</a>
+                </div>
+            </div>
+
+            <!-- Card007 -->
+            <div class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: transparent; border: 2px solid #E7F6F2">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moviePoster7" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 id="movieTitle7" class="card-title"></h5>
+                    <p id="movieRelease7" class="card-text" style="color: #A5C9CA;"></p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA; font-family: 'Raleway', sans-serif; padding: 10px; width: 170px;">Watch</a>
+                </div>
+            </div>
+
+            <!-- Card008 -->
+            <div class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: transparent; border: 2px solid #E7F6F2">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moviePoster8" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 id="movieTitle8" class="card-title"></h5>
+                    <p id="movieRelease8" class="card-text" style="color: #A5C9CA;"></p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA; font-family: 'Raleway', sans-serif; padding: 10px; width: 170px;">Watch</a>
+                </div>
+            </div>
+
+            <!-- Card009 -->
+            <div class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: transparent; border: 2px solid #E7F6F2">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moviePoster9" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 id="movieTitle9" class="card-title"></h5>
+                    <p id="movieRelease9" class="card-text" style="color: #A5C9CA;"></p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA; font-family: 'Raleway', sans-serif; padding: 10px; width: 170px;">Watch</a>
+                </div>
+            </div>
+
+            <!-- Card0010 -->
+            <div class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: transparent; border: 2px solid #E7F6F2">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moviePoster10" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 id="movieTitle10" class="card-title"></h5>
+                    <p id="movieRelease10" class="card-text" style="color: #A5C9CA;"></p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA; font-family: 'Raleway', sans-serif; padding: 10px; width: 170px;">Watch</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Recommend For You
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            Indicators 
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            Wrapper for slides
+            <div class="carousel-inner">
+
+                <div class="item active">
+                    <img src="images/img4.png" alt="Los Angeles" style="width:100%;">
+                    <h3>Los Angeles</h3>
+                    <p>LA is always so much fun!</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/img5.png" alt="Chicago" style="width:100%;">
+                    <h3>Los Angeles</h3>
+                    <p>LA is always so much fun!</p
+                </div>
+
+                <div class="item">
+                    <img src="images/img6.png" alt="New York" style="width:100%;">
+                    <h3>Los Angeles</h3>
+                    <p>LA is always so much fun!</p>
+                </div>
+
+            </div>
+        </div>-->
+
+        <!--Top Rated-->
+        <div class="row" id="TopRated" style="margin-bottom: 50px;">
+            <div class="col-sm-12" style="color: white; font-family: 'Raleway', sans-serif; padding: 10px">
+                <h3>Top Rated Movies (2022)</h3>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 50px;">
+            <!-- Card011 -->
+            <div class="card col-sm-3" style="border: none;background-color: transparent; border: 2px solid #E7F6F2; margin-left: 7%;">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="topPoster0" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 id="topTitle0" class="card-title"></h5>
+                    <p id="topRate0" class="card-text" style="color: #A5C9CA;"></p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA; font-family: 'Raleway', sans-serif; padding: 10px; width: 270px;">Watch</a>
+                </div>
+            </div>
+            <!-- Card012 -->
+            <div class="card col-sm-3" style="border: none;background-color: transparent; border: 2px solid #E7F6F2; margin-left: 7%;">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="topPoster1" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 id="topTitle1" class="card-title"></h5>
+                    <p id="topRate1" class="card-text" style="color: #A5C9CA;"></p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA; font-family: 'Raleway', sans-serif; padding: 10px; width: 270px;">Watch</a>
+                </div>
+            </div>
+            <!-- Card013 -->
+            <div class="card col-sm-3" style="border: none;background-color: transparent; border: 2px solid #E7F6F2; margin-left: 7%;">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="topPoster2" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body" style="color: #A5C9CA;">
+                    <h5 id="topTitle2" class="card-title"></h5>
+                    <p id="topRate2" class="card-text" style="color: #A5C9CA;"></p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA; font-family: 'Raleway', sans-serif; padding: 10px; width: 270px;">Watch</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Continue To Watch-->
+        <div class="row" id="ContinueWatching" style="margin-bottom: 50px; font-family: 'Raleway', sans-serif; padding: 10px">
+            <div class="col-sm-12" style="color: white;">
+                <h3>Continue Watching</h3>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 50px;">
+
+            <!-- Card014 -->
+            <div class="card col-sm-2" style="padding: 0px; border: none; margin-left: 2%; background-color: transparent; border: 2px solid #E7F6F2">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moviePoster14" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body card-body_hover" style="color: #A5C9CA;">
+                    <h5 id="movieTitle14" class="card-title"></h5>
+                    <p id="movieRelease14" class="card-text" style="color: #A5C9CA;"></p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA; font-family: 'Raleway', sans-serif; padding: 10px; width: 170px;">Watch</a>
+                </div>
+            </div>
+            <!-- Card015 -->
+            <div class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: transparent; border: 2px solid #E7F6F2">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moviePoster15" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body card-body_hover" style="color: #A5C9CA;">
+                    <h5 id="movieTitle15" class="card-title"></h5>
+                    <p id="movieRelease15" class="card-text" style="color: #A5C9CA;"></p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA; font-family: 'Raleway', sans-serif; padding: 10px; width: 170px;">Watch</a>
+                </div>
+            </div>
+            <!-- Card016 -->
+            <div class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: transparent; border: 2px solid #E7F6F2">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moviePoster16" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body card-body_hover" style="color: #A5C9CA;">
+                    <h5 id="movieTitle16" class="card-title"></h5>
+                    <p id="movieRelease16" class="card-text" style="color: #A5C9CA;"></p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA; font-family: 'Raleway', sans-serif; padding: 10px; width: 170px;">Watch</a>
+                </div>
+            </div>
+            <!-- Card017 -->
+            <div class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: transparent; border: 2px solid #E7F6F2">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moviePoster17" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body card-body_hover" style="color: #A5C9CA;">
+                    <h5 id="movieTitle17" class="card-title"></h5>
+                    <p id="movieRelease17" class="card-text" style="color: #A5C9CA;"></p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA; font-family: 'Raleway', sans-serif; padding: 10px; width: 170px;">Watch</a>
+                </div>
+            </div>
+            <!-- Card018 -->
+            <div class="card col-sm-2" style="padding: 0px; border: none; margin-left: 3%; background-color: transparent; border: 2px solid #E7F6F2">
+                <div class="bg-image" data-mdb-ripple-color="light">
+                    <img id="moviePoster18" src="#" class="img-fluid" style="border-radius: 5px 5px 0px 0px;" />
+                </div>
+                <div class="card-body card-body_hover" style="color: #A5C9CA;">
+                    <h5 id="movieTitle18" class="card-title"></h5>
+                    <p id="movieRelease18" class="card-text" style="color: #A5C9CA;"></p>
+                    <a href="#!" class="btn" style="background-color:#A5C9CA; font-family: 'Raleway', sans-serif; padding: 10px; width: 170px;">Watch</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="text-center text-lg-start text-white" style="background-color: #2c3333ff; color: #A5C9CA; margin-top: 100px; ">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">
+                            <img src="assets/Logo/K3C.png" style="height:50px;">
+                        </h6>
+                        <p style="color: #A5C9CA;">
+                            KC3 is a movie streaming platform that allows you to catch up and watch all your favorite
+                            movies
+                            as well
+                            as latest releases.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3" style="color: #A5C9CA;">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Pages</h6>
+                        <p>
+                            <a class="text-white">Sign-in/Up</a>
+                        </p>
+                        <p>
+                            <a class="text-white">Home</a>
+                        </p>
+                        <p>
+                            <a class="text-white">TV Shows</a>
+                        </p>
+                        <p>
+                            <a class="text-white">Movies</a>
+                        </p>
+                        <p>
+                            <a class="text-white">My list</a>
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3" style="color: #A5C9CA;">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                        <p style="color: #A5C9CA;"><i class="fas fa-home mr-3"></i> Gauteng, Centurion, SA</p>
+                        <p style="color: #A5C9CA;"><i class="fas fa-envelope mr-3"></i> info@kc3.com</p>
+                        <p style="color: #A5C9CA;"><i class="fas fa-phone mr-3"></i> 012 345 6789</p>
+                        <p style="color: #A5C9CA;"><i class="fas fa-print mr-3"></i> 010 111 2131</p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold" style="color: #A5C9CA;">Follow us</h6>
+
+                        <!-- Facebook -->
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998"
+                            href="https://www.facebook.com/" role="button"><i class="bi bi-facebook"></i></a>
+
+                        <!-- Twitter -->
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee"
+                            href="https://twitter.com/" role="button"><i class="bi bi-twitter"></i></a>
+
+                        <!-- Google -->
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39"
+                            href="https://www.youtube.com/" role="button"><i class="bi bi-youtube"></i></a>
+
+                        <!-- Instagram -->
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac"
+                            href="https://www.instagram.com/" role="button"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); color: #A5C9CA;">
+            © 2022 Copyright:
+            <a class="text-white" style="color: #2C3333;">KC3.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+</body>
+
+</html>

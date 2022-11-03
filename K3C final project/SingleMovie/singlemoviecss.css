@@ -1,0 +1,75 @@
+body{
+    background-image: url(../SingleMovie/Group\ 2.png);
+}
+
+.navbar-brand{
+    font-weight: bold;
+}
+.background{
+    background-color: rgb(30, 38, 38);
+}
+
+.navbar{
+    margin-top: -0.5rem;
+}
+
+.container-fluid{
+    background-color: #2c3333ff;
+}
+
+.nav-link{
+    color: red;
+}
+
+.headername{
+    color: aliceblue;
+    padding-left: 0.5rem;
+}
+
+.headerlinks{
+    color: aliceblue;
+}
+
+.card{
+    margin: auto;
+    width: 90%;
+    margin-top: 3%;
+    border: 1px #2c3333ff;
+}
+.card1{
+    border: #2c3333ff 1px;
+}
+.card-body{
+    background-color: rgb(30, 38, 38);
+}
+
+.movieposter{
+    height: 2rem;
+}
+#libTitle11{
+    font-size: 4rem;
+    text-align: center;
+    color: aliceblue;
+}
+
+#libPoster11{
+    font-size: 1.3rem;
+    color: aliceblue;
+}
+#libInfo11{
+    color: aliceblue;
+}
+#libRating1{
+    color: aliceblue;
+}
+#smgenre1{
+    color: aliceblue;
+
+}
+
+
+
+
+
+
+
